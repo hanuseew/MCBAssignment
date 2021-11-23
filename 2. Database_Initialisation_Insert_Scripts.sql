@@ -1,0 +1,31 @@
+
+-- define list of KPIs for reporting
+INSERT INTO REF_KPILIST(KPINUMBER, KPICODE, KPIDESCRIPTION, DBCOLUMNNAME, FORMULA)
+            VALUES(1, 'ER.FSH.PROD.MT','Total fisheries production (metric tons)','ER_FSH_PROD_MT','ER_FSH_PROD_MT');
+INSERT INTO REF_KPILIST(KPINUMBER, KPICODE, KPIDESCRIPTION, DBCOLUMNNAME, FORMULA)
+            VALUES(2, 'AG.LND.AGRI.K2','Agricultural land (sq. km)','AG_LND_AGRI_K2','AG_LND_AGRI_K2');
+INSERT INTO REF_KPILIST(KPINUMBER, KPICODE, KPIDESCRIPTION, DBCOLUMNNAME, FORMULA)
+            VALUES(3, 'IC.REG.DURS','Time required to start a business (days)','IC_REG_DURS','IC_REG_DURS');
+INSERT INTO REF_KPILIST(KPINUMBER, KPICODE, KPIDESCRIPTION, DBCOLUMNNAME, FORMULA)
+            VALUES(4, 'IC.BUS.NREG ','New businesses registered (number)','IC_BUS_NREG','IC_BUS_NREG');
+INSERT INTO REF_KPILIST(KPINUMBER, KPICODE, KPIDESCRIPTION, DBCOLUMNNAME, FORMULA)
+            VALUES(5, 'SL.AGR.EMPL.ZS','Employment in agriculture (% of total employment) (modeled ILO estimate)','SL_AGR_EMPL_ZS','SL_AGR_EMPL_ZS');
+INSERT INTO REF_KPILIST(KPINUMBER, KPICODE, KPIDESCRIPTION, DBCOLUMNNAME, FORMULA)
+            VALUES(6, 'SL.EMP.SELF.ZS','Self-employed, total (% of total employment) (modeled ILO estimate)','SL_EMP_SELF_ZS','SL_EMP_SELF_ZS');
+INSERT INTO REF_KPILIST(KPINUMBER, KPICODE, KPIDESCRIPTION, DBCOLUMNNAME, FORMULA)
+            VALUES(7, 'CPI','Corruption Perception Index','CPI','CPI');
+            
+-- define list of reporting countries for Power BI
+INSERT INTO REF_REPORTING_COUNTRY(CountryCode) Values('SYC');
+INSERT INTO REF_REPORTING_COUNTRY(CountryCode) Values('MDV');
+INSERT INTO REF_REPORTING_COUNTRY(CountryCode) Values('CIV');
+INSERT INTO REF_REPORTING_COUNTRY(CountryCode) Values('KEN');
+INSERT INTO REF_REPORTING_COUNTRY(CountryCode) Values('LKA');
+INSERT INTO REF_REPORTING_COUNTRY(CountryCode) Values('IND');
+INSERT INTO REF_REPORTING_COUNTRY(CountryCode) Values('SGP');
+INSERT INTO REF_REPORTING_COUNTRY(CountryCode) Values('AUS');
+INSERT INTO REF_REPORTING_COUNTRY(CountryCode) Values('DNK');
+INSERT INTO REF_REPORTING_COUNTRY(CountryCode) Values('FIN');
+
+-- initialisation of the start year load for fact data
+INSERT INTO REF_PARAMETERS(YearStartLoad) values (2010);
